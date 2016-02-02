@@ -1,0 +1,33 @@
+<html ng-app="cs580App">
+	<!-- This page uses AngularJS -->
+	<head>
+	    <title>CS580 Demo HomePage using AngularJS</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	    <script src="/js/home-control-gps.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+
+	<body ng-controller="GpsCtrl">
+
+	    <div>
+	        <div>
+	            <label>User List</label>
+	            <table border="1">
+	                <tr>
+	                    <td>Title</td>
+	                    <td>Price</td>
+	                    <td>Image</td>
+	                </tr>
+
+	                <tr ng-repeat="gps in gpsItems">
+	                    <td>{{gps.title}}</td>
+	                    <td>{{gps.price}}</td>
+	                    <td><img src={{gps.imageUrl}}></img></td>
+	                </tr>
+	            </table>
+	        </div>
+	    </div>
+
+	</body>
+
+</html>

@@ -1,25 +1,16 @@
 package edu.cpp.cs580.data;
 
 public class GPSItem {
-
-	private String name;
+	
+	private String title;
 	private String price;
-
-	public GPSItem() {
-
+	private String imageUrl;
+	
+	public String getTitle() {
+		return title;
 	}
-
-	public GPSItem(String name, String price) {
-		super();
-		this.name = name;
-		this.price = price;
-	}
-
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getPrice() {
 		return price;
@@ -27,4 +18,11 @@ public class GPSItem {
 	public void setPrice(String price) {
 		this.price = price;
 	}
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
 }
