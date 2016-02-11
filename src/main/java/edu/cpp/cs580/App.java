@@ -8,8 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import com.firebase.client.Firebase;
+
 import edu.cpp.cs580.data.provider.EBayGPSItemProvider;
 import edu.cpp.cs580.data.provider.FSUserManager;
+import edu.cpp.cs580.data.provider.FirebaseUserManager;
 import edu.cpp.cs580.data.provider.GPSDataProvider;
 import edu.cpp.cs580.data.provider.UserManager;
 
@@ -27,7 +30,7 @@ public class App {
      */
     @Bean
     public UserManager userManager() {    	
-        UserManager userManager = new FSUserManager();
+        UserManager userManager =  new FirebaseUserManager(); //new FSUserManager();
         return userManager;
     }
     
