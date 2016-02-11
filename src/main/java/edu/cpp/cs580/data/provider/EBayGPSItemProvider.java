@@ -21,6 +21,7 @@ public class EBayGPSItemProvider implements GPSDataProvider {
 		try {
 
 			// need http protocol
+			// the item order could change 
 			doc = Jsoup.connect("http://www.ebay.com/sch/Vehicle-Electronics-GPS-/3270/i.html?_from=R40&_nkw=gps").get();
 
 			// get page title
