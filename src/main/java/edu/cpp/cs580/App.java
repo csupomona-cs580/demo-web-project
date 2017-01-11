@@ -8,12 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.firebase.client.Firebase;
-
-import edu.cpp.cs580.data.provider.EBayGPSItemProvider;
 import edu.cpp.cs580.data.provider.FSUserManager;
-import edu.cpp.cs580.data.provider.FirebaseUserManager;
-import edu.cpp.cs580.data.provider.GPSDataProvider;
 import edu.cpp.cs580.data.provider.UserManager;
 
 @Configuration
@@ -29,16 +24,11 @@ public class App {
      * annotation is applied.
      */
     @Bean
-    public UserManager userManager() {    	
-        UserManager userManager =  new FirebaseUserManager(); //new FSUserManager();
+    public UserManager userManager() {
+        UserManager userManager =  new FSUserManager();
         return userManager;
     }
-    
-    @Bean
-    public GPSDataProvider gpsDataProvider() {
-    		return new EBayGPSItemProvider();
-    }
-    
+
     /**
      * This is the running main method for the web application.
      * Please note that Spring requires that there is one and
