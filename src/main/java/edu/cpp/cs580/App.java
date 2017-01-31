@@ -8,7 +8,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import edu.cpp.cs580.data.provider.EBayGpsProductManager;
 import edu.cpp.cs580.data.provider.FSUserManager;
+import edu.cpp.cs580.data.provider.GpsProductManager;
 import edu.cpp.cs580.data.provider.UserManager;
 
 @Configuration
@@ -27,6 +29,12 @@ public class App {
     public UserManager userManager() {
         UserManager userManager =  new FSUserManager();
         return userManager;
+    }
+
+    @Bean
+    public GpsProductManager gpsProductManager() {
+    		GpsProductManager gpsManager = new EBayGpsProductManager();
+    		return gpsManager;
     }
 
     /**
