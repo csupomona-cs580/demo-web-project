@@ -60,7 +60,7 @@ public class EBayGpsProductManager implements GpsProductManager {
 			markers[10] = 1;
 		}
 
-		return null; //gpsProducts;
+		return gpsProducts;
 	}
 
 }
