@@ -10,4 +10,9 @@ public class UserManagerTest {
 	public void testAddUser() {
 		Assert.assertTrue(true);
 	}
+
+	@Test
+	public void testAddUser2() {
+		Assert.assertTrue(true);
+	}
 }
