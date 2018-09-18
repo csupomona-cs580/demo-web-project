@@ -132,6 +132,16 @@ public class WebController {
 	List<User> listAllUsers() {
 		return userManager.listAllUsers();
 	}
+	
+	//------------------- Delete All Users --------------------------------------------------------
+     
+    @RequestMapping(value = "/user/", method = RequestMethod.DELETE)
+    public ResponseEntity<User> deleteAllUsers() {
+        System.out.println("Deleting All Users");
+ 
+        userService.deleteAllUsers();
+        return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
+    }
 
 	/*********** Web UI Test Utility **********/
 	/**
